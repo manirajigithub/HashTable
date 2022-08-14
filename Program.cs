@@ -1,4 +1,4 @@
-﻿using HashTable;
+using HashTable;
 
 namespace HashTableUC2
 {
