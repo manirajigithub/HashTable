@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "HashTable/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/HashTable.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HashTable.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "HashTable/1.0.0": {
+      "type": "project",
+      "path": "../HashTable/HashTable.csproj",
+      "msbuildProject": "../HashTable/HashTable.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "HashTable >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\mani1\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\mani1\\source\\repos\\HashTable\\HashTable\\HashTable.csproj": {
+              "projectPath": "C:\\Users\\mani1\\source\\repos\\HashTable\\HashTable\\HashTable.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,4 +1,6 @@
-﻿namespace HashTableUC2
+﻿using HashTable;
+
+namespace HashTableUC2
 {
     class program
     {
