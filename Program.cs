@@ -31,10 +31,15 @@
                     break;
                 case 2:
                     string Uc2 = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
+
                     string[] LenghtOfParagraph = Uc2.Split(" ");//splits a string into an array of strings
+
                     int tableSize = LenghtOfParagraph.Length;//used to get the number of characters/string in the current String
-                    Hash_Ex<int, string> hashTable1 = new Hash_Ex<int, string>(tableSize);
+
+                    HashTable<int, string> hashTable1 = new HashTable<int, string>(tableSize);
+
                     int getIndex = 0;
+
                     foreach (string words in LenghtOfParagraph)
                     {
                         hashTable1.Insert(getIndex, words);
