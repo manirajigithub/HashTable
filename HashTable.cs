@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hashing
 {
-    /// <summary>
-    /// class-
-    /// Keys--Holds the Keys,Keys is an array of HashMap Type
-    /// tableSize-//define size of keys and calculate hash
-    /// </summary>
+    
     public class HashTable<K, V>
     {
         private MyMapNode<K, V>[] Keys;
@@ -21,10 +17,7 @@ namespace Hashing
             tableSize = maxTableSize;
             Keys = new MyMapNode<K, V>[tableSize];
         }
-        /// <summary>
-        /// Hash Function
-        /// </summary>
-        /// <param name="Key"></param>
+        
         private int HashFuncation(K key)
         {
             int position = key.GetHashCode() % tableSize; //identifying hash code of key
@@ -48,13 +41,7 @@ namespace Hashing
             MyMapNode<K, V> newNode = new MyMapNode<K, V>() { Key = key, Value = value, Previous = node, Next = null };
             node.Next = newNode;
         }
-        /// <summary>
-        /// get values by their key
-        /// </summary>
-        /// <param name="key">key</param>
-        /// <returns>value</returns>
-        /// <exception cref="Exception">Don't have the key in hash</exception>
-        public V GetValue(K key)
+               public V GetValue(K key)
         {
             int genIndex = HashFuncation(key);
             MyMapNode<K, V> node = Keys[genIndex];
